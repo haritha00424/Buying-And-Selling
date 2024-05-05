@@ -86,7 +86,7 @@ export default class compaintlist extends Component {
          </div>
         
 
-        <h2 id="AllSupplier" style={{marginTop:"30px", marginBottom:"30px"}}>All Complaint</h2>
+        <h2 id="AllSupplier" style={{marginTop:"30px", marginBottom:"30px"}}>All Complaints</h2>
         <br></br>
          <table className='table table-hover'>
             <thead>

@@ -4,6 +4,7 @@ import Header from '../Dashboard/Header/Header';
 
 
 
+// displaying and managing discounts
 export default class DiscountList extends Component {
     constructor(props) {
         super(props);
@@ -80,8 +81,9 @@ export default class DiscountList extends Component {
     render() {
         return (
             <div>
-                <Header />
                 
+                <Header />
+               
                 <div className='container' id="discountContainer">
                     <div className='col-lg-3 mt-2 mb-2'>
                         <input className="form-control" id="serchbar"
@@ -143,11 +145,13 @@ export default class DiscountList extends Component {
                                         &nbsp;&nbsp;&nbsp;
                                         <a href={`/discount/${discount._id}`} id="view">VIEW</a>&nbsp; &nbsp;&nbsp;
                                     </td>
+                                    
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
+                
             </div>
         );
     }

@@ -16,11 +16,11 @@ export default function CreateDiscount() {
   const history = useHistory();
 
   function calculateNewPrice() {
-    const discountAmount = parseFloat(price) * (parseFloat(pdiscount) / 100);
+    const discountAmount = parseFloat(price)*(parseFloat(pdiscount) / 100);
     const discountedPrice = parseFloat(price) - discountAmount;
     setNewPrice(discountedPrice.toFixed(2));
   }
-
+//  send discount data to the server
   function sendData(e) {
     e.preventDefault();
     const newDiscount = {
@@ -44,7 +44,7 @@ export default function CreateDiscount() {
         alert(err);
       });
   }
-
+// Calculate new price when  discount changes
   useEffect(() => {
     if (price !== "" && pdiscount !== "") {
       calculateNewPrice();

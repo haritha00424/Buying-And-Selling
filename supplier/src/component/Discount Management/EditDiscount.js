@@ -27,19 +27,19 @@ export default function EditDiscount(props) {
             setCategory(discount.category);
             setDiscount(discount.pdiscount);
             setPrice(discount.price);
-            setNewPrice(discount.newPrice); // Update newPrice state
+            setNewPrice(discount.newPrice); 
             setDate(discount.date);
             setTime(discount.time);
             setNote(discount.note);
         });
     }, [props.match.params.id]);
-
+    // Function to calculate new price based on price and discount percentage
     function calculateNewPrice(price, pdiscount) {
         const discountPercentage = parseFloat(pdiscount) / 100;
         const newPrice = parseFloat(price) - (parseFloat(price) * discountPercentage);
         return newPrice.toFixed(2);
     }
-
+// Handle form submission
     function sendData(e) {
         e.preventDefault();
 
@@ -50,7 +50,7 @@ export default function EditDiscount(props) {
             category,
             pdiscount,
             price,
-            newPrice: updatedNewPrice, // Include the updated new price in the object
+            newPrice: updatedNewPrice, 
             date,
             time,
             note,
